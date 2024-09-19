@@ -1,78 +1,75 @@
-/* General CSS Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    padding: 10px;
-    background-color: #f4f4f4;
-}
+*{font-family:"Comic Sans MS", cursive, sans-serif;
+  box-sizing: border-box;}
 
-header h1 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
+	.title-container {
+  width: 90%;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-size: 175%;
+  }
 
-/* Section Styles */
-.box {
-    background-color: #e0e0e0;
-    border: 1px solid black;
-    padding: 20px;
-    margin-bottom: 20px;
-    position: relative;
-    padding-top: 50px; /* Space for the title */
-}
+   .menu-title{
+   	width:40%;
+   	float:right;
+   	border: 2px solid black;
+   	text-align: center;
+   	font-size: 125%;
+   	float:right;
+   }
 
-/* Section Title */
-.section-title {
-    background-color: #333;
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 10px;
-    font-size: 1.25em;
-    border: 1px solid black;
-}
+   .menu{
+   	background-color: #8e8e8e;
+   	margin:10px;
+   	border:2px solid black;
+   }
 
-/* Responsive Layout */
+   .text{
+   	margin:10px;
+   	margin-top:40px;
+   	clear:both;
+   }
+
+   .row {
+    width: 90%;
+    border: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    padding:5px;
+   }
+   #chicken{background-color: #cf8d8d;}
+   #beef{background-color: #b93c3b; color:white;}
+   #sushi{background-color: #e1ca8d;}
+   
+
+/********** Desktop **********/
 @media (min-width: 992px) {
-    /* Desktop view: sections in a single row */
-    main {
-        display: flex;
-        justify-content: space-between;
-    }
-    .box {
-        width: 32%;
-    }
+  .col-lg-4 {
+    float: left;
+    background-color: white;
+    width: 33.33%;
+  }
 }
 
+/********** Tablet **********/
 @media (min-width: 768px) and (max-width: 991px) {
-    /* Tablet view: two sections on the first row, one on the second row */
-    main {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .box {
-        width: 48%;
-        margin-right: 2%;
-        margin-bottom: 20px;
-    }
-    #sushi {
-        width: 100%;
-        margin-right: 0;
-    }
+  .col-md-6, .col-md-12 {
+    float: left;
+    background-color: white;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
 }
 
-@media (max-width: 767px) {
-    /* Mobile view: each section takes up the full width */
-    .box {
-        width: 100%;
-    }
+/********** Mobile **********/
+@media (max-width: 767px) {.col-sm-12 {
+    float: left;
+    background-color: white;
+    width: 100%;}
 }
